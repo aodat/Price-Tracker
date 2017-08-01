@@ -19,6 +19,9 @@
 		FA6C17A81F31146300165CBA /* FavoritesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C17A71F31146300165CBA /* FavoritesCollectionViewController.swift */; };
 		FA6C17AA1F3119C700165CBA /* LoginTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C17A91F3119C700165CBA /* LoginTableViewController.swift */; };
 		FA6C17AC1F3119E500165CBA /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C17AB1F3119E500165CBA /* BaseTableViewController.swift */; };
+		FA6C17B01F312BA300165CBA /* FavoritedProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA6C17AF1F312BA300165CBA /* FavoritedProductCell.xib */; };
+		FA6C17B21F312C0100165CBA /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA6C17B11F312C0100165CBA /* ProductCell.xib */; };
+		FA6C17B51F312C8400165CBA /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C17B41F312C8400165CBA /* ProductCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,9 @@
 		FA6C17A71F31146300165CBA /* FavoritesCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesCollectionViewController.swift; sourceTree = "<group>"; };
 		FA6C17A91F3119C700165CBA /* LoginTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginTableViewController.swift; sourceTree = "<group>"; };
 		FA6C17AB1F3119E500165CBA /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
+		FA6C17AF1F312BA300165CBA /* FavoritedProductCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavoritedProductCell.xib; sourceTree = "<group>"; };
+		FA6C17B11F312C0100165CBA /* ProductCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductCell.xib; sourceTree = "<group>"; };
+		FA6C17B41F312C8400165CBA /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,16 +96,14 @@
 		FA6C178D1F31129100165CBA /* Price Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				FA6C17B31F312C6D00165CBA /* Reusable Cells */,
 				FA6C17A01F31139300165CBA /* Base */,
+				FA6C17AE1F312B6C00165CBA /* Controller */,
+				FA6C17AD1F312B5A00165CBA /* View */,
 				FA6C178E1F31129100165CBA /* AppDelegate.swift */,
 				FA6C17901F31129100165CBA /* ViewController.swift */,
-				FA6C17921F31129100165CBA /* Main.storyboard */,
 				FA6C17951F31129100165CBA /* Assets.xcassets */,
-				FA6C17971F31129100165CBA /* LaunchScreen.storyboard */,
 				FA6C179A1F31129100165CBA /* Info.plist */,
-				FA6C17A51F31143300165CBA /* ProductsCollectionViewController.swift */,
-				FA6C17A71F31146300165CBA /* FavoritesCollectionViewController.swift */,
-				FA6C17A91F3119C700165CBA /* LoginTableViewController.swift */,
 			);
 			path = "Price Tracker";
 			sourceTree = "<group>";
@@ -112,6 +116,35 @@
 				FA6C17AB1F3119E500165CBA /* BaseTableViewController.swift */,
 			);
 			name = Base;
+			sourceTree = "<group>";
+		};
+		FA6C17AD1F312B5A00165CBA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA6C17971F31129100165CBA /* LaunchScreen.storyboard */,
+				FA6C17921F31129100165CBA /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		FA6C17AE1F312B6C00165CBA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FA6C17A51F31143300165CBA /* ProductsCollectionViewController.swift */,
+				FA6C17A71F31146300165CBA /* FavoritesCollectionViewController.swift */,
+				FA6C17A91F3119C700165CBA /* LoginTableViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		FA6C17B31F312C6D00165CBA /* Reusable Cells */ = {
+			isa = PBXGroup;
+			children = (
+				FA6C17B11F312C0100165CBA /* ProductCell.xib */,
+				FA6C17AF1F312BA300165CBA /* FavoritedProductCell.xib */,
+				FA6C17B41F312C8400165CBA /* ProductCollectionViewCell.swift */,
+			);
+			name = "Reusable Cells";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,6 +211,8 @@
 			files = (
 				FA6C17991F31129100165CBA /* LaunchScreen.storyboard in Resources */,
 				FA6C17961F31129100165CBA /* Assets.xcassets in Resources */,
+				FA6C17B21F312C0100165CBA /* ProductCell.xib in Resources */,
+				FA6C17B01F312BA300165CBA /* FavoritedProductCell.xib in Resources */,
 				FA6C17941F31129100165CBA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -244,6 +279,7 @@
 				FA6C17911F31129100165CBA /* ViewController.swift in Sources */,
 				FA6C17A81F31146300165CBA /* FavoritesCollectionViewController.swift in Sources */,
 				FA6C178F1F31129100165CBA /* AppDelegate.swift in Sources */,
+				FA6C17B51F312C8400165CBA /* ProductCollectionViewCell.swift in Sources */,
 				FA6C17AA1F3119C700165CBA /* LoginTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -408,6 +444,7 @@
 				FA6C179F1F31129100165CBA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

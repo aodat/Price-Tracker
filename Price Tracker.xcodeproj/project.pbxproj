@@ -16,6 +16,8 @@
 		FA6C17A41F3113DE00165CBA /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C17A31F3113DE00165CBA /* BaseViewController.swift */; };
 		FA6C17A61F31143300165CBA /* ProductsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C17A51F31143300165CBA /* ProductsCollectionViewController.swift */; };
 		FA6C17A81F31146300165CBA /* FavoritesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C17A71F31146300165CBA /* FavoritesCollectionViewController.swift */; };
+		FA6C17AA1F3119C700165CBA /* LoginTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C17A91F3119C700165CBA /* LoginTableViewController.swift */; };
+		FA6C17AC1F3119E500165CBA /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C17AB1F3119E500165CBA /* BaseTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		FA6C17A31F3113DE00165CBA /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		FA6C17A51F31143300165CBA /* ProductsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductsCollectionViewController.swift; sourceTree = "<group>"; };
 		FA6C17A71F31146300165CBA /* FavoritesCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesCollectionViewController.swift; sourceTree = "<group>"; };
+		FA6C17A91F3119C700165CBA /* LoginTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginTableViewController.swift; sourceTree = "<group>"; };
+		FA6C17AB1F3119E500165CBA /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,7 @@
 				FA6C179A1F31129100165CBA /* Info.plist */,
 				FA6C17A51F31143300165CBA /* ProductsCollectionViewController.swift */,
 				FA6C17A71F31146300165CBA /* FavoritesCollectionViewController.swift */,
+				FA6C17A91F3119C700165CBA /* LoginTableViewController.swift */,
 			);
 			path = "Price Tracker";
 			sourceTree = "<group>";
@@ -80,6 +85,7 @@
 			children = (
 				FA6C17A11F3113AD00165CBA /* BaseCollectionViewController.swift */,
 				FA6C17A31F3113DE00165CBA /* BaseViewController.swift */,
+				FA6C17AB1F3119E500165CBA /* BaseTableViewController.swift */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -158,10 +164,12 @@
 			files = (
 				FA6C17A21F3113AD00165CBA /* BaseCollectionViewController.swift in Sources */,
 				FA6C17A61F31143300165CBA /* ProductsCollectionViewController.swift in Sources */,
+				FA6C17AC1F3119E500165CBA /* BaseTableViewController.swift in Sources */,
 				FA6C17A41F3113DE00165CBA /* BaseViewController.swift in Sources */,
 				FA6C17911F31129100165CBA /* ViewController.swift in Sources */,
 				FA6C17A81F31146300165CBA /* FavoritesCollectionViewController.swift in Sources */,
 				FA6C178F1F31129100165CBA /* AppDelegate.swift in Sources */,
+				FA6C17AA1F3119C700165CBA /* LoginTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

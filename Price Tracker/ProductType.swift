@@ -1,5 +1,5 @@
 //
-//  Product.swift
+//  ProductType.swift
 //  Price Tracker
 //
 //  Created by Abdalla Odat on 8/2/17.
@@ -9,15 +9,11 @@
 import UIKit
 import ObjectMapper
 
-class Product: Root {
+class ProductType: Root {
     
     var id = ""
-    var categoryId = ""
     var title = ""
-    var price = Price()
-    var prices = [Price]()
-    var imageURL: String?
-    var favorited = false
+    var url: String?
     
     override init() {
         super.init()
@@ -27,12 +23,10 @@ class Product: Root {
         super.init(map: map)
         mapping(map: map)
     }
-    
+
     override func mapping(map: Map) {
-        id          <- map["id"]
-        categoryId  <- map["product_type_id"]
-        title       <- map["label"]
-        price       <- map["offer_price"]
-        imageURL    <- map["images.L.0"]
+        id      <- map["id"]
+        title   <- map["label_plural"]
+        url     <- map["link"]
     }
 }

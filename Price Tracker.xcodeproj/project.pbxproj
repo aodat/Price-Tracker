@@ -12,6 +12,10 @@
 		FA6C17941F31129100165CBA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA6C17921F31129100165CBA /* Main.storyboard */; };
 		FA6C17961F31129100165CBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA6C17951F31129100165CBA /* Assets.xcassets */; };
 		FA6C17991F31129100165CBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA6C17971F31129100165CBA /* LaunchScreen.storyboard */; };
+		FA6C17A21F3113AD00165CBA /* BaseCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C17A11F3113AD00165CBA /* BaseCollectionViewController.swift */; };
+		FA6C17A41F3113DE00165CBA /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C17A31F3113DE00165CBA /* BaseViewController.swift */; };
+		FA6C17A61F31143300165CBA /* ProductsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C17A51F31143300165CBA /* ProductsCollectionViewController.swift */; };
+		FA6C17A81F31146300165CBA /* FavoritesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C17A71F31146300165CBA /* FavoritesCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		FA6C17951F31129100165CBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA6C17981F31129100165CBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA6C179A1F31129100165CBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA6C17A11F3113AD00165CBA /* BaseCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewController.swift; sourceTree = "<group>"; };
+		FA6C17A31F3113DE00165CBA /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		FA6C17A51F31143300165CBA /* ProductsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductsCollectionViewController.swift; sourceTree = "<group>"; };
+		FA6C17A71F31146300165CBA /* FavoritesCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +62,26 @@
 		FA6C178D1F31129100165CBA /* Price Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				FA6C17A01F31139300165CBA /* Base */,
 				FA6C178E1F31129100165CBA /* AppDelegate.swift */,
 				FA6C17901F31129100165CBA /* ViewController.swift */,
 				FA6C17921F31129100165CBA /* Main.storyboard */,
 				FA6C17951F31129100165CBA /* Assets.xcassets */,
 				FA6C17971F31129100165CBA /* LaunchScreen.storyboard */,
 				FA6C179A1F31129100165CBA /* Info.plist */,
+				FA6C17A51F31143300165CBA /* ProductsCollectionViewController.swift */,
+				FA6C17A71F31146300165CBA /* FavoritesCollectionViewController.swift */,
 			);
 			path = "Price Tracker";
+			sourceTree = "<group>";
+		};
+		FA6C17A01F31139300165CBA /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				FA6C17A11F3113AD00165CBA /* BaseCollectionViewController.swift */,
+				FA6C17A31F3113DE00165CBA /* BaseViewController.swift */,
+			);
+			name = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +156,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA6C17A21F3113AD00165CBA /* BaseCollectionViewController.swift in Sources */,
+				FA6C17A61F31143300165CBA /* ProductsCollectionViewController.swift in Sources */,
+				FA6C17A41F3113DE00165CBA /* BaseViewController.swift in Sources */,
 				FA6C17911F31129100165CBA /* ViewController.swift in Sources */,
+				FA6C17A81F31146300165CBA /* FavoritesCollectionViewController.swift in Sources */,
 				FA6C178F1F31129100165CBA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,18 +7,74 @@
 //
 
 import UIKit
+import PKHUD
 
 class ProductsCollectionViewController: BaseCollectionViewController {
     
+    var products = [Product]()
+    var page     = 1
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        PKHUD.sharedHUD.contentView = PKHUDProgressView()
+        PKHUD.sharedHUD.show()
+        self.collectionView?.register(UINib(nibName:"ProductCell", bundle: nil), forCellWithReuseIdentifier: "ListProduct")
+        PKHUD.sharedHUD.hide() { success in
+            ProductManager.getProducts(page: self.page) { (success, errorMsg , products) in
+                if let products = products {
+                    self.products = products
+                    self.collectionView?.reloadData()
+                }
+            }
+        }
+    }
+    
+    override func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return self.products.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        
+        let padding:CGFloat =  20
+        let collectionViewSize = collectionView.frame.size.width - padding
+        
+        return CGSize(width: collectionViewSize/2, height: collectionViewSize/2)
+        
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ListProduct", for: indexPath) as! ProductCollectionViewCell
+        
+        cell.product = self.products[indexPath.row]
+        
+        return cell
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if indexPath.row == self.products.count - 1 {
+            self.page += 1
+            loadMoreProductType()
+        }
+    }
+    
+    func loadMoreProductType(){
+        PKHUD.sharedHUD.contentView = PKHUDProgressView()
+        PKHUD.sharedHUD.show()
+        ProductManager.getProducts(page: self.page) { (success, errorMsg , products) in
+            if let products = products {
+                for pt in 0...9 {
+                    self.products.append(products[pt])
+                }
+                PKHUD.sharedHUD.hide() { success in
+                    self.collectionView?.reloadData()
+                }
+            }
+        }
     }
 
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
 }

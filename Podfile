@@ -9,6 +9,7 @@ target 'Price Tracker' do
     pod 'AlamofireImage', '~> 3.2'
     pod 'AlamofireNetworkActivityIndicator', '~> 2.2'
     pod 'ObjectMapper', '~> 2.2'
+    pod 'p2.OAuth2', '~> 3.0'
     pod 'PKHUD', '~> 4.2'
   
 end

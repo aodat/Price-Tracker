@@ -14,6 +14,7 @@ class ProductType: Root {
     var id = ""
     var title = ""
     var url: String?
+    var isSelected = false
     
     override init() {
         super.init()

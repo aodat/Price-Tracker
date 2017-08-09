@@ -46,7 +46,7 @@ struct Constants {
         static let AppSecret      = "akI9Cx8n5JrvC2X8rLGT"
         static let AuthorizeUri   = "https://api.souq.com/oauth/authorize"
         static let AccessTokenUri = "https://api.souq.com/oauth/access_token"
-        static let RedirectUri    = "souq-skills-test://oauth-callback"
+        static let RedirectUri    = "souq-price-tracker://oauth-callback"
         static let scope          = "OAuth2.0,discovery,customer_profile"
     }
 

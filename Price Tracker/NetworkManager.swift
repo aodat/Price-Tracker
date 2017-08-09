@@ -31,7 +31,7 @@ class NetworkManager: NSObject {
     }
     
     enum Result {
-        case success([String: Any])
+        case success(Any)
         case fail(FailReason)
     }
     
@@ -67,7 +67,7 @@ class NetworkManager: NSObject {
                 return
             }
             
-            guard let data = root["data"] as? [String: Any] else {
+            guard let data = root["data"] as? Any else {
                 completion?(.fail(.protocol("Could not find JSON body response.")))
                 return
             }

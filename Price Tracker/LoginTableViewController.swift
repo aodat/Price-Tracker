@@ -23,10 +23,18 @@ class LoginTableViewController: BaseTableViewController {
         super.viewWillAppear(animated)
     }
     
-    @IBAction func loginButtonTapped(sender: AnyObject) {
+    override func viewDidAppear(_ animated: Bool) {
         
     }
     
+    @IBAction func loginButtonTapped(_ sender: Any) {
+        AuthenticationManager.authorize {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "ProductTypes")
+            self.present(vc,animated: true)
+        }
+    }
+
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.row {
         case 0:
@@ -35,4 +43,6 @@ class LoginTableViewController: BaseTableViewController {
             return 50
         }
     }
+    
+    
 }

@@ -15,7 +15,7 @@ class ProductManager {
     static var productType:ProductType = ProductType()
     
     class func getProducts(page: Int, completeion: ((Bool , String? , [Product]? ) -> Void)?)  {
-        let url = Constants.URLs.getProduct
+        let url = Constants.URLs.getProducts
         var selectedProductTypesId = ""
         
         if let productypes = UserDefaults.standard.array(forKey: "selectedProductsTypesId") as? [String]{
@@ -92,6 +92,46 @@ class ProductManager {
                     }
                     DispatchQueue.main.async {
                         completeion?(true, nil , products)
+                    }
+                }
+                
+            case .fail(let reason):
+                completeion?(false , reason.description, nil)
+            }
+        }
+    }
+
+
+    class func getProductById(productId: Int, completeion: ((Bool , String? , Product? ) -> Void)?)  {
+        let url = Constants.URLs.getProductId(id: productId)
+        
+        let params = [
+            "country"         :Constants.RequestConfigurations.Country,
+            "language"        :Constants.RequestConfigurations.language,
+            "format"          :Constants.RequestConfigurations.format,
+            "app_id"          :Constants.RequestConfigurations.AppId,
+            "app_secret"      :Constants.RequestConfigurations.AppSecret
+        ]
+        
+        NetworkManager.get(url,params: params) { ( result) in
+            
+            switch result {
+            case .success(let resultRoot):
+                
+                guard let productModel = resultRoot as? [String : Any] else {
+                    completeion?(false , "No 'resultRoot' field.", nil)
+                    return
+                }
+                
+                DispatchQueue.global(qos: .background).async {
+                    guard let product = Mapper<Product>().map(JSON: productModel) else {
+                        DispatchQueue.main.async {
+                            completeion?(false, "Failed to map response into objects.", nil)
+                        }
+                        return
+                    }
+                    DispatchQueue.main.async {
+                        completeion?(true, nil , product)
                     }
                 }
                 

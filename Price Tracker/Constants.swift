@@ -20,13 +20,18 @@ struct Constants {
     
     struct URLs {
         
-        static var getProduct:String{
+        static var getProducts:String{
             get{ return  Constants.baseUrl + "/products?"}
         }
         
         static var getProductType:String{
             get{ return  Constants.baseUrl + "/products/types?"}
         }
+        
+        static func getProductId(id: Int) -> String{
+             return  Constants.baseUrl + "/products/\(id)?"
+        }
+
 
     }
     

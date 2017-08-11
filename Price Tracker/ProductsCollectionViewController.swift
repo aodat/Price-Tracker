@@ -55,6 +55,12 @@ class ProductsCollectionViewController: BaseCollectionViewController {
         return cell
     }
     
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let ProductDetailViewController = storyboard.instantiateViewController(withIdentifier: "Product") as! ProductDetailTableViewController
+        ProductDetailViewController.productDetail = self.products[indexPath.row]
+        self.navigationController?.pushViewController(ProductDetailViewController, animated: true)
+    }
     override func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         if indexPath.row == self.products.count - 1 {
             self.page += 1
@@ -67,8 +73,8 @@ class ProductsCollectionViewController: BaseCollectionViewController {
         PKHUD.sharedHUD.show()
         ProductManager.getProducts(page: self.page) { (success, errorMsg , products) in
             if let products = products {
-                for pt in 0...9 {
-                    self.products.append(products[pt])
+                for index in 0...9 {
+                    self.products.append(products[index])
                 }
                 PKHUD.sharedHUD.hide() { success in
                     self.collectionView?.reloadData()

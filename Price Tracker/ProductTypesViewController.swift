@@ -59,8 +59,8 @@ class ProductTypesViewController: BaseViewController, UITableViewDelegate, UITab
         PKHUD.sharedHUD.show()
             ProductManager.getProductsTypes(page: self.page) { (success, errorMsg , productsType) in
                 if let productsType = productsType {
-                    for pt in 0...9 {
-                        self.productTypes.append(productsType[pt])
+                    for index in 0...9 {
+                        self.productTypes.append(productsType[index])
                     }
                     PKHUD.sharedHUD.hide() { success in
                         self.tableView?.reloadData()

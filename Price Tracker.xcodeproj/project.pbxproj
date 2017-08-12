@@ -226,7 +226,6 @@
 				FADDC0BC1F3F5E5100DBA85E /* View */,
 				FADDC0BD1F3F5E5C00DBA85E /* Model */,
 				FADDC0BB1F3F5E4800DBA85E /* Controller */,
-				FAF587641F38C8FB00D20101 /* ProductTypesViewController.swift */,
 			);
 			name = ProdyctType;
 			sourceTree = "<group>";
@@ -250,6 +249,7 @@
 		FADDC0BB1F3F5E4800DBA85E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				FAF587641F38C8FB00D20101 /* ProductTypesViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";

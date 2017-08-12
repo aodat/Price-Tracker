@@ -27,14 +27,13 @@
 		FA6C17B51F312C8400165CBA /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C17B41F312C8400165CBA /* ProductCollectionViewCell.swift */; };
 		FA6C17B81F31426700165CBA /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C17B71F31426700165CBA /* Product.swift */; };
 		FA6C17BA1F314A3700165CBA /* ProductType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C17B91F314A3700165CBA /* ProductType.swift */; };
-		FA6C17BC1F314AB800165CBA /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C17BB1F314AB800165CBA /* Price.swift */; };
+		FA6C17BC1F314AB800165CBA /* DB.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C17BB1F314AB800165CBA /* DB.swift */; };
 		FA6C17BE1F314B4A00165CBA /* Root.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C17BD1F314B4A00165CBA /* Root.swift */; };
 		FADDC0AA1F3E179E00DBA85E /* ProductDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADDC0A91F3E179E00DBA85E /* ProductDetailTableViewController.swift */; };
-		FADDC0AC1F3E219100DBA85E /* FavoriteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADDC0AB1F3E219100DBA85E /* FavoriteManager.swift */; };
 		FADDC0AE1F3E292C00DBA85E /* PriceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADDC0AD1F3E292C00DBA85E /* PriceTableViewCell.swift */; };
+		FADDC0B21F3E60C000DBA85E /* PricesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADDC0B11F3E60C000DBA85E /* PricesTableViewController.swift */; };
 		FAF587631F38C79500D20101 /* ProductTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF587621F38C79500D20101 /* ProductTypeTableViewCell.swift */; };
 		FAF587651F38C8FB00D20101 /* ProductTypesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF587641F38C8FB00D20101 /* ProductTypesViewController.swift */; };
-		FAF587671F3946F500D20101 /* ddd.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAF587661F3946F500D20101 /* ddd.storyboard */; };
 		FAF587691F3949CF00D20101 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF587681F3949CF00D20101 /* AuthenticationManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -63,14 +62,13 @@
 		FA6C17B41F312C8400165CBA /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		FA6C17B71F31426700165CBA /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		FA6C17B91F314A3700165CBA /* ProductType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductType.swift; sourceTree = "<group>"; };
-		FA6C17BB1F314AB800165CBA /* Price.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
+		FA6C17BB1F314AB800165CBA /* DB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DB.swift; sourceTree = "<group>"; };
 		FA6C17BD1F314B4A00165CBA /* Root.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Root.swift; sourceTree = "<group>"; };
 		FADDC0A91F3E179E00DBA85E /* ProductDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDetailTableViewController.swift; sourceTree = "<group>"; };
-		FADDC0AB1F3E219100DBA85E /* FavoriteManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteManager.swift; sourceTree = "<group>"; };
 		FADDC0AD1F3E292C00DBA85E /* PriceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriceTableViewCell.swift; sourceTree = "<group>"; };
+		FADDC0B11F3E60C000DBA85E /* PricesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PricesTableViewController.swift; sourceTree = "<group>"; };
 		FAF587621F38C79500D20101 /* ProductTypeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductTypeTableViewCell.swift; sourceTree = "<group>"; };
 		FAF587641F38C8FB00D20101 /* ProductTypesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductTypesViewController.swift; sourceTree = "<group>"; };
-		FAF587661F3946F500D20101 /* ddd.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ddd.storyboard; sourceTree = "<group>"; };
 		FAF587681F3949CF00D20101 /* AuthenticationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,7 +107,6 @@
 				FAF587681F3949CF00D20101 /* AuthenticationManager.swift */,
 				FA5E1EDF1F31F45B00E9FE37 /* NetworkManager.swift */,
 				FA5E1EE61F326B0B00E9FE37 /* ProductManager.swift */,
-				FADDC0AB1F3E219100DBA85E /* FavoriteManager.swift */,
 			);
 			name = Managers;
 			sourceTree = "<group>";
@@ -173,7 +170,6 @@
 			children = (
 				FA6C17971F31129100165CBA /* LaunchScreen.storyboard */,
 				FA6C17921F31129100165CBA /* Main.storyboard */,
-				FAF587661F3946F500D20101 /* ddd.storyboard */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -186,6 +182,7 @@
 				FA6C17A91F3119C700165CBA /* LoginTableViewController.swift */,
 				FAF587641F38C8FB00D20101 /* ProductTypesViewController.swift */,
 				FADDC0A91F3E179E00DBA85E /* ProductDetailTableViewController.swift */,
+				FADDC0B11F3E60C000DBA85E /* PricesTableViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -207,7 +204,7 @@
 			children = (
 				FA6C17B71F31426700165CBA /* Product.swift */,
 				FA6C17B91F314A3700165CBA /* ProductType.swift */,
-				FA6C17BB1F314AB800165CBA /* Price.swift */,
+				FA6C17BB1F314AB800165CBA /* DB.swift */,
 				FA6C17BD1F314B4A00165CBA /* Root.swift */,
 			);
 			name = Model;
@@ -280,7 +277,6 @@
 				FA6C17B21F312C0100165CBA /* ProductCell.xib in Resources */,
 				FA6C17B01F312BA300165CBA /* FavoritedProductCell.xib in Resources */,
 				FA6C17941F31129100165CBA /* Main.storyboard in Resources */,
-				FAF587671F3946F500D20101 /* ddd.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,7 +341,8 @@
 				FA6C17AC1F3119E500165CBA /* BaseTableViewController.swift in Sources */,
 				FA6C17A41F3113DE00165CBA /* BaseViewController.swift in Sources */,
 				FAF587691F3949CF00D20101 /* AuthenticationManager.swift in Sources */,
-				FA6C17BC1F314AB800165CBA /* Price.swift in Sources */,
+				FA6C17BC1F314AB800165CBA /* DB.swift in Sources */,
+				FADDC0B21F3E60C000DBA85E /* PricesTableViewController.swift in Sources */,
 				FAF587631F38C79500D20101 /* ProductTypeTableViewCell.swift in Sources */,
 				FA6C17911F31129100165CBA /* ViewController.swift in Sources */,
 				FA5E1EE51F32664A00E9FE37 /* Constants.swift in Sources */,
@@ -355,7 +352,6 @@
 				FADDC0AE1F3E292C00DBA85E /* PriceTableViewCell.swift in Sources */,
 				FA5E1EE71F326B0B00E9FE37 /* ProductManager.swift in Sources */,
 				FADDC0AA1F3E179E00DBA85E /* ProductDetailTableViewController.swift in Sources */,
-				FADDC0AC1F3E219100DBA85E /* FavoriteManager.swift in Sources */,
 				FA5E1EE01F31F45B00E9FE37 /* NetworkManager.swift in Sources */,
 				FAF587651F38C8FB00D20101 /* ProductTypesViewController.swift in Sources */,
 				FA6C17B81F31426700165CBA /* Product.swift in Sources */,

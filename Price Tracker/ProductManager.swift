@@ -8,6 +8,7 @@
 
 import UIKit
 import ObjectMapper
+import RealmSwift
 
 class ProductManager {
     
@@ -141,6 +142,47 @@ class ProductManager {
         }
         
     }
+    
+    class func getLastPriceForProduct(productId: String) -> Int{
+        let realm = try! Realm()
+        if let lastPrice = realm.objects(Price.self).filter("id = '\(productId)'").last?.price {
+            return lastPrice
+        }
+        return 0
+    }
+    
+    class func addPriceForProduct(productId: String, price: Int){
+        let realm = try! Realm()
+        try! realm.write {
+            realm.create(Price.self, value: ["id": productId, "price": price ], update: false)
+        }
+    }
+    
+    class func addProductToFavorite(product: Product){
+        
+        let Favoritedproduct = Favorited()
+        Favoritedproduct.id = product.id
+        Favoritedproduct.categoryId = product.categoryId
+        Favoritedproduct.title = product.title
+        Favoritedproduct.imageURL = product.imageURL
+        Favoritedproduct.currency = product.currency
+        Favoritedproduct.price = product.price
+    
+        let realm = try! Realm()
+        try! realm.write {
+            realm.add(Favoritedproduct)
+        }
+        product.updatePrice()
+    }
+    
+    class func removeProductFromFavorite(product: Product){
+        let realm = try! Realm()
+        try! realm.write {
+            let objectsToDelete = realm.objects(Favorited.self).filter("id = '\(product.id)'").first
+            realm.delete(objectsToDelete!)
+        }
+    }
+
 
     
 }

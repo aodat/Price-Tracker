@@ -12,7 +12,6 @@
 		FA5E1EE51F32664A00E9FE37 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5E1EE41F32664A00E9FE37 /* Constants.swift */; };
 		FA5E1EE71F326B0B00E9FE37 /* ProductManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5E1EE61F326B0B00E9FE37 /* ProductManager.swift */; };
 		FA6C178F1F31129100165CBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C178E1F31129100165CBA /* AppDelegate.swift */; };
-		FA6C17911F31129100165CBA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C17901F31129100165CBA /* ViewController.swift */; };
 		FA6C17941F31129100165CBA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA6C17921F31129100165CBA /* Main.storyboard */; };
 		FA6C17961F31129100165CBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA6C17951F31129100165CBA /* Assets.xcassets */; };
 		FA6C17991F31129100165CBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA6C17971F31129100165CBA /* LaunchScreen.storyboard */; };
@@ -45,7 +44,6 @@
 		FA5E1EE61F326B0B00E9FE37 /* ProductManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductManager.swift; sourceTree = "<group>"; };
 		FA6C178B1F31129100165CBA /* Price Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Price Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA6C178E1F31129100165CBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FA6C17901F31129100165CBA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FA6C17931F31129100165CBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FA6C17951F31129100165CBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA6C17981F31129100165CBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -138,17 +136,9 @@
 		FA6C178D1F31129100165CBA /* Price Tracker */ = {
 			isa = PBXGroup;
 			children = (
-				FA5E1EE31F32663700E9FE37 /* Helpers */,
-				FA5E1EDE1F31F44900E9FE37 /* Managers */,
-				FA6C17B61F31425900165CBA /* Model */,
-				FA6C17B31F312C6D00165CBA /* Reusable Cells */,
-				FA6C17A01F31139300165CBA /* Base */,
-				FA6C17AE1F312B6C00165CBA /* Controller */,
-				FA6C17AD1F312B5A00165CBA /* View */,
-				FA6C178E1F31129100165CBA /* AppDelegate.swift */,
-				FA6C17901F31129100165CBA /* ViewController.swift */,
+				FADDC0C11F3F5F5C00DBA85E /* Application */,
+				FADDC0BF1F3F5ECF00DBA85E /* Modules */,
 				FA6C17951F31129100165CBA /* Assets.xcassets */,
-				FA6C179A1F31129100165CBA /* Info.plist */,
 			);
 			path = "Price Tracker";
 			sourceTree = "<group>";
@@ -163,7 +153,144 @@
 			name = Base;
 			sourceTree = "<group>";
 		};
-		FA6C17AD1F312B5A00165CBA /* View */ = {
+		FA6C17AD1F312B5A00165CBA /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				FA6C17B61F31425900165CBA /* Model */,
+				FA5E1EE31F32663700E9FE37 /* Helpers */,
+				FADDC0C01F3F5F4F00DBA85E /* View */,
+				FA6C17A01F31139300165CBA /* Base */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		FA6C17AE1F312B6C00165CBA /* Price */ = {
+			isa = PBXGroup;
+			children = (
+				FADDC0BE1F3F5E9A00DBA85E /* Controller */,
+				FADDC0B11F3E60C000DBA85E /* PricesTableViewController.swift */,
+			);
+			name = Price;
+			sourceTree = "<group>";
+		};
+		FA6C17B61F31425900165CBA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FA6C17BB1F314AB800165CBA /* DB.swift */,
+				FA6C17BD1F314B4A00165CBA /* Root.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		FADDC0B31F3F5D4100DBA85E /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				FADDC0A91F3E179E00DBA85E /* ProductDetailTableViewController.swift */,
+				FADDC0B61F3F5D5200DBA85E /* Controller */,
+				FADDC0B51F3F5D4F00DBA85E /* View */,
+				FADDC0B41F3F5D4A00DBA85E /* Model */,
+			);
+			name = Product;
+			sourceTree = "<group>";
+		};
+		FADDC0B41F3F5D4A00DBA85E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FA6C17B71F31426700165CBA /* Product.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		FADDC0B51F3F5D4F00DBA85E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA6C17B11F312C0100165CBA /* ProductCell.xib */,
+				FADDC0AD1F3E292C00DBA85E /* PriceTableViewCell.swift */,
+				FA6C17B41F312C8400165CBA /* ProductCollectionViewCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		FADDC0B61F3F5D5200DBA85E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FA6C17A51F31143300165CBA /* ProductsCollectionViewController.swift */,
+				FA6C17A71F31146300165CBA /* FavoritesCollectionViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		FADDC0B81F3F5DBF00DBA85E /* ProdyctType */ = {
+			isa = PBXGroup;
+			children = (
+				FADDC0BC1F3F5E5100DBA85E /* View */,
+				FADDC0BD1F3F5E5C00DBA85E /* Model */,
+				FADDC0BB1F3F5E4800DBA85E /* Controller */,
+				FAF587641F38C8FB00D20101 /* ProductTypesViewController.swift */,
+			);
+			name = ProdyctType;
+			sourceTree = "<group>";
+		};
+		FADDC0B91F3F5E3000DBA85E /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				FADDC0BA1F3F5E3600DBA85E /* Controller */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		FADDC0BA1F3F5E3600DBA85E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FA6C17A91F3119C700165CBA /* LoginTableViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		FADDC0BB1F3F5E4800DBA85E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		FADDC0BC1F3F5E5100DBA85E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FAF587621F38C79500D20101 /* ProductTypeTableViewCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		FADDC0BD1F3F5E5C00DBA85E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FA6C17B91F314A3700165CBA /* ProductType.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		FADDC0BE1F3F5E9A00DBA85E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		FADDC0BF1F3F5ECF00DBA85E /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				FA6C17AD1F312B5A00165CBA /* Common */,
+				FA5E1EDE1F31F44900E9FE37 /* Managers */,
+				FA6C17AE1F312B6C00165CBA /* Price */,
+				FADDC0B31F3F5D4100DBA85E /* Product */,
+				FADDC0B81F3F5DBF00DBA85E /* ProdyctType */,
+				FADDC0B91F3F5E3000DBA85E /* Login */,
+			);
+			name = Modules;
+			sourceTree = "<group>";
+		};
+		FADDC0C01F3F5F4F00DBA85E /* View */ = {
 			isa = PBXGroup;
 			children = (
 				FA6C17971F31129100165CBA /* LaunchScreen.storyboard */,
@@ -172,39 +299,13 @@
 			name = View;
 			sourceTree = "<group>";
 		};
-		FA6C17AE1F312B6C00165CBA /* Controller */ = {
+		FADDC0C11F3F5F5C00DBA85E /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				FA6C17A51F31143300165CBA /* ProductsCollectionViewController.swift */,
-				FA6C17A71F31146300165CBA /* FavoritesCollectionViewController.swift */,
-				FA6C17A91F3119C700165CBA /* LoginTableViewController.swift */,
-				FAF587641F38C8FB00D20101 /* ProductTypesViewController.swift */,
-				FADDC0A91F3E179E00DBA85E /* ProductDetailTableViewController.swift */,
-				FADDC0B11F3E60C000DBA85E /* PricesTableViewController.swift */,
+				FA6C179A1F31129100165CBA /* Info.plist */,
+				FA6C178E1F31129100165CBA /* AppDelegate.swift */,
 			);
-			name = Controller;
-			sourceTree = "<group>";
-		};
-		FA6C17B31F312C6D00165CBA /* Reusable Cells */ = {
-			isa = PBXGroup;
-			children = (
-				FA6C17B11F312C0100165CBA /* ProductCell.xib */,
-				FA6C17B41F312C8400165CBA /* ProductCollectionViewCell.swift */,
-				FAF587621F38C79500D20101 /* ProductTypeTableViewCell.swift */,
-				FADDC0AD1F3E292C00DBA85E /* PriceTableViewCell.swift */,
-			);
-			name = "Reusable Cells";
-			sourceTree = "<group>";
-		};
-		FA6C17B61F31425900165CBA /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				FA6C17B71F31426700165CBA /* Product.swift */,
-				FA6C17B91F314A3700165CBA /* ProductType.swift */,
-				FA6C17BB1F314AB800165CBA /* DB.swift */,
-				FA6C17BD1F314B4A00165CBA /* Root.swift */,
-			);
-			name = Model;
+			name = Application;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -340,7 +441,6 @@
 				FA6C17BC1F314AB800165CBA /* DB.swift in Sources */,
 				FADDC0B21F3E60C000DBA85E /* PricesTableViewController.swift in Sources */,
 				FAF587631F38C79500D20101 /* ProductTypeTableViewCell.swift in Sources */,
-				FA6C17911F31129100165CBA /* ViewController.swift in Sources */,
 				FA5E1EE51F32664A00E9FE37 /* Constants.swift in Sources */,
 				FA6C17A81F31146300165CBA /* FavoritesCollectionViewController.swift in Sources */,
 				FA6C17BE1F314B4A00165CBA /* Root.swift in Sources */,

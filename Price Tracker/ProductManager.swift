@@ -151,10 +151,14 @@ class ProductManager {
         return 0
     }
     
-    class func addPriceForProduct(productId: String, price: Int){
+    class func addPriceForProduct(productId: String, price: Int, date: Date, currency: String){
+        let formatter = DateFormatter()
+        formatter.dateStyle = .short
+        let dateFormatted = formatter.string(from: date)
+
         let realm = try! Realm()
         try! realm.write {
-            realm.create(Price.self, value: ["id": productId, "price": price ], update: false)
+            realm.create(Price.self, value: ["id": productId, "price": price, "date": dateFormatted, "currency": currency ], update: false)
         }
     }
     
@@ -167,7 +171,7 @@ class ProductManager {
         Favoritedproduct.imageURL = product.imageURL
         Favoritedproduct.currency = product.currency
         Favoritedproduct.price = product.price
-    
+        
         let realm = try! Realm()
         try! realm.write {
             realm.add(Favoritedproduct)

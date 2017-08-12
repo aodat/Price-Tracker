@@ -40,7 +40,7 @@ class Product: Root {
     
     func updatePrice(){
         if  ProductManager.getLastPriceForProduct(productId: self.id) != self.price {
-            ProductManager.addPriceForProduct(productId: self.id, price: self.price)
+            ProductManager.addPriceForProduct(productId: self.id, price: self.price, date: self.date, currency: self.currency)
         }
     }
 }

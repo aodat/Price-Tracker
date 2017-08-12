@@ -14,10 +14,11 @@ class Product: Root {
     var id = ""
     var categoryId = ""
     var title = ""
-    var price = Price()
-    var prices = [Price]()
-    var imageURL: String?
+    var price = 0
+    var currency = ""
+    var imageURL = ""
     var favorited = false
+    var date = Date()
     
     override init() {
         super.init()
@@ -33,6 +34,13 @@ class Product: Root {
         categoryId  <- map["product_type_id"]
         title       <- map["label"]
         price       <- map["offer_price"]
+        currency    <- map["currency"]
         imageURL    <- map["images.L.0"]
+    }
+    
+    func updatePrice(){
+        if  ProductManager.getLastPriceForProduct(productId: self.id) != self.price {
+            ProductManager.addPriceForProduct(productId: self.id, price: self.price)
+        }
     }
 }

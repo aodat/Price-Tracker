@@ -33,10 +33,7 @@ class ProductCollectionViewCell: UICollectionViewCell {
     
     func updateViews(product: Product) {
         self.productTitleLabel.text = product.title
-        
-        if let productImageURL = product.imageURL {
-            self.productImageView.af_setImage(withURL:URL(string: productImageURL)!)
-        }
+        self.productImageView.af_setImage(withURL:URL(string: product.imageURL)!)
     }
     
     @IBAction func favoriteButtonTapped(sender: AnyObject) {

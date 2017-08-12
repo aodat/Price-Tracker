@@ -11,5 +11,6 @@ target 'Price Tracker' do
     pod 'ObjectMapper', '~> 2.2'
     pod 'p2.OAuth2', '~> 3.0'
     pod 'PKHUD', '~> 4.2'
+    pod 'RealmSwift', '3.0.0-beta.2'
   
 end

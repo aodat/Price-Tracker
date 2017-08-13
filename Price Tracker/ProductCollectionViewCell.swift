@@ -8,11 +8,8 @@
 
 import UIKit
 import AlamofireImage
-
-enum ProductCellSet {
-    case All
-    case Favorited
-}
+import RealmSwift
+import PKHUD
 
 class ProductCollectionViewCell: UICollectionViewCell {
     
@@ -36,11 +33,23 @@ class ProductCollectionViewCell: UICollectionViewCell {
         self.productImageView.af_setImage(withURL:URL(string: product.imageURL)!)
     }
     
-    @IBAction func favoriteButtonTapped(sender: AnyObject) {
-        print("favoriteButtonTapped:")
+    @IBAction func favoriteButtonTapped(_ sender: Any) {
+        let realm = try! Realm()
+        let query = realm.objects(Favorited.self).filter("id = '\(product.id)'").count
+        
+        if query < 1 {
+            ProductManager.addProductToFavorite(product: product)
+            HUD.flash(.label("Added To Favorite"), delay: 1.0) { _ in
+                print("item added to fav")
+            }
+            self.favoriteButton.setImage(UIImage(named: "active_favorite"), for: .normal)
+        } else {
+            ProductManager.removeProductFromFavorite(product: product)
+            HUD.flash(.label("Removed From Favorite"), delay: 1.0) { _ in
+                print("item removed from fav")
+            }
+            self.favoriteButton.setImage(UIImage(named: "deactive_favorite"), for: .normal)            
+        }
     }
     
-    @IBAction func deleteFavoriteButtonTapped(sender: AnyObject) {
-        print("deleteFavoriteButtonTapped:")
-    }
 }

@@ -185,7 +185,6 @@
 		FADDC0B31F3F5D4100DBA85E /* Product */ = {
 			isa = PBXGroup;
 			children = (
-				FADDC0A91F3E179E00DBA85E /* ProductDetailTableViewController.swift */,
 				FADDC0B61F3F5D5200DBA85E /* Controller */,
 				FADDC0B51F3F5D4F00DBA85E /* View */,
 				FADDC0B41F3F5D4A00DBA85E /* Model */,
@@ -214,6 +213,7 @@
 		FADDC0B61F3F5D5200DBA85E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				FADDC0A91F3E179E00DBA85E /* ProductDetailTableViewController.swift */,
 				FA6C17A51F31143300165CBA /* ProductsCollectionViewController.swift */,
 				FA6C17A71F31146300165CBA /* FavoritesCollectionViewController.swift */,
 			);

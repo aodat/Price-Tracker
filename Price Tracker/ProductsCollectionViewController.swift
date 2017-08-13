@@ -16,17 +16,15 @@ class ProductsCollectionViewController: BaseCollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        PKHUD.sharedHUD.contentView = PKHUDProgressView()
-        PKHUD.sharedHUD.show()
+        HUD.flash(.progress)
         self.collectionView?.register(UINib(nibName:"ProductCell", bundle: nil), forCellWithReuseIdentifier: "ListProduct")
-        PKHUD.sharedHUD.hide() { success in
             ProductManager.getProducts(page: self.page) { (success, errorMsg , products) in
                 if let products = products {
                     self.products = products
                     self.collectionView?.reloadData()
+                    HUD.hide()
                 }
             }
-        }
     }
     
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -69,15 +67,15 @@ class ProductsCollectionViewController: BaseCollectionViewController {
     }
     
     func loadMoreProductType(){
-        PKHUD.sharedHUD.contentView = PKHUDProgressView()
-        PKHUD.sharedHUD.show()
+        HUD.flash(.progress)
         ProductManager.getProducts(page: self.page) { (success, errorMsg , products) in
             if let products = products {
-                for index in 0...9 {
-                    self.products.append(products[index])
-                }
-                PKHUD.sharedHUD.hide() { success in
+                if products.count > 0 {
+                    for index in 0...9 {
+                        self.products.append(products[index])
+                    }
                     self.collectionView?.reloadData()
+                    HUD.hide()
                 }
             }
         }

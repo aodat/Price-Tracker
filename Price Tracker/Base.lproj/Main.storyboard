@@ -266,6 +266,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Product Types" id="JSj-at-XYN"/>
                     <connections>
+                        <outlet property="nextButton" destination="wGm-x8-3n0" id="Fxl-gl-ekK"/>
                         <outlet property="tableView" destination="1w1-h8-BMl" id="vKj-t2-EoE"/>
                     </connections>
                 </viewController>
